@@ -1,849 +1,1191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Skypace Hub | Fueling Creativity. Igniting Brands.</title>
-
-<meta name="description"
-content="Skypace Hub helps businesses grow through digital marketing, advertising, branding, SEO, web solutions, technology, AI and business growth strategy.">
-
-<style>
-:root {
-    --blue: #0797D5;
-    --blue-dark: #0577A9;
-    --green: #8BD63F;
-    --green-light: #EEFFD9;
-    --dark: #062635;
-    --dark-soft: #0B3446;
-    --text: #183746;
-    --muted: #667E89;
-    --light: #F5FBFD;
-    --white: #FFFFFF;
-    --border: #DDECF1;
-    --shadow: 0 20px 55px rgba(6,38,53,0.10);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.65;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-.container {
-    width: 90%;
-    max-width: 1180px;
-    margin: auto;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-}
-
-.nav-inner {
-    min-height: 76px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: -1px;
-    color: var(--dark);
-}
-
-.logo span {
-    color: var(--blue);
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.nav-links a {
-    transition: 0.2s ease;
-}
-
-.nav-links a:hover {
-    color: var(--blue);
-}
-
-.nav-cta {
-    background: var(--dark);
-    color: white !important;
-    padding: 11px 18px;
-    border-radius: 8px;
-}
-
-.nav-cta:hover {
-    background: var(--blue);
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn {
-    display: inline-block;
-    padding: 14px 21px;
-    border-radius: 9px;
-    font-size: 14px;
-    font-weight: 800;
-    transition: 0.25s ease;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: var(--blue);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--blue-dark);
-    transform: translateY(-2px);
-}
-
-.btn-green {
-    background: var(--green);
-    color: #173000;
-}
-
-.btn-green:hover {
-    transform: translateY(-2px);
-    background: #7FCB34;
-}
-
-.btn-outline {
-    border: 1px solid var(--border);
-    background: white;
-}
-
-.btn-outline:hover {
-    border-color: var(--blue);
-    color: var(--blue);
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 680px;
-    display: flex;
-    align-items: center;
-    background:
-        radial-gradient(circle at 85% 15%, rgba(139,214,63,0.18), transparent 28%),
-        radial-gradient(circle at 5% 85%, rgba(7,151,213,0.10), transparent 28%),
-        linear-gradient(135deg,#EFFAFF,#FFFFFF);
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 75px;
-    align-items: center;
-    padding: 95px 0;
-}
-
-.tagline {
-    color: var(--blue);
-    font-size: 13px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 17px;
-}
-
-.hero h1 {
-    color: var(--dark);
-    font-size: clamp(46px,6vw,76px);
-    line-height: 1.01;
-    letter-spacing: -4px;
-    max-width: 700px;
-}
-
-.hero h1 span {
-    color: var(--blue);
-}
-
-.hero-text {
-    color: var(--muted);
-    font-size: 18px;
-    max-width: 630px;
-    margin-top: 25px;
-}
-
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 31px;
-}
-
-/* HERO VISUAL */
-
-.hero-visual {
-    position: relative;
-}
-
-.hero-photo {
-    height: 520px;
-    border-radius: 26px;
-    overflow: hidden;
-    background: var(--dark);
-    box-shadow: 0 30px 70px rgba(6,38,53,0.16);
-}
-
-.hero-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/*
-  Temporary real photography.
-  Replace later with your own approved company/team image.
-*/
-
-.hero-badge {
-    position: absolute;
-    left: -28px;
-    bottom: 25px;
-    width: 235px;
-    padding: 19px 21px;
-    border-radius: 13px;
-    background: white;
-    box-shadow: var(--shadow);
-}
-
-.hero-badge strong {
-    display: block;
-    color: var(--dark);
-    font-size: 15px;
-}
-
-.hero-badge span {
-    display: block;
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 4px;
-}
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-.section {
-    padding: 100px 0;
-}
-
-.light {
-    background: var(--light);
-}
-
-.dark {
-    background: var(--dark);
-    color: white;
-}
-
-.eyebrow {
-    color: var(--blue);
-    font-size: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1.7px;
-    margin-bottom: 12px;
-}
-
-.dark .eyebrow {
-    color: var(--green);
-}
-
-h2 {
-    font-size: clamp(35px,4.5vw,52px);
-    line-height: 1.08;
-    letter-spacing: -2px;
-    margin-bottom: 20px;
-}
-
-.section-text {
-    color: var(--muted);
-    font-size: 16px;
-}
-
-.dark .section-text {
-    color: #C1D2D9;
-}
-
-.two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 75px;
-    align-items: center;
-}
-
-/* =========================
-   INTRO / PROBLEM
-========================= */
-
-.problem {
-    padding: 100px 0;
-}
-
-.problem-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 75px;
-    align-items: center;
-}
-
-.problem h2 {
-    max-width: 570px;
-}
-
-.problem-copy {
-    color: #C1D2D9;
-    font-size: 17px;
-}
-
-.quote {
-    margin-top: 25px;
-    border-left: 4px solid var(--green);
-    padding-left: 20px;
-    font-size: 20px;
-    line-height: 1.45;
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.services-header {
-    max-width: 700px;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 18px;
-    margin-top: 55px;
-}
-
-.card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 17px;
-    padding: 29px;
-    transition: 0.25s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
-    border-color: #B9DDE8;
-}
-
-.card-icon {
-    width: 50px;
-    height: 50px;
-    display: grid;
-    place-items: center;
-    background: var(--green-light);
-    border-radius: 13px;
-    font-size: 22px;
-    margin-bottom: 21px;
-}
-
-.card h3 {
-    color: var(--dark);
-    font-size: 18px;
-    margin-bottom: 9px;
-}
-
-.card p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* =========================
-   METRICS
-========================= */
-
-.metrics {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 13px;
-    margin-top: 42px;
-}
-
-.metric {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 23px;
-}
-
-.metric strong {
-    display: block;
-    color: var(--dark);
-    font-size: 21px;
-}
-
-.metric span {
-    display: block;
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-line {
-    width: 65px;
-    height: 4px;
-    background: var(--green);
-    margin-bottom: 25px;
-}
-
-.about-copy p {
-    color: var(--muted);
-    font-size: 17px;
-    margin-bottom: 17px;
-}
-
-/* =========================
-   PROCESS
-========================= */
-
-.process-heading {
-    max-width: 700px;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 15px;
-    margin-top: 50px;
-}
-
-.step {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 23px;
-}
-
-.step-number {
-    color: var(--blue);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.step h3 {
-    margin-top: 9px;
-    color: var(--dark);
-    font-size: 17px;
-}
-
-.step p {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 8px;
-}
-
-/* =========================
-   AUDIENCE
-========================= */
-
-.audience {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
-}
-
-.pill {
-    background: white;
-    border: 1px solid var(--border);
-    padding: 9px 15px;
-    border-radius: 30px;
-    color: var(--text);
-    font-size: 13px;
-    font-weight: 700;
-}
-
-/* =========================
-   MENTORSHIP
-========================= */
-
-.academy {
-    background: linear-gradient(135deg,#EAFBFF,#F3FFE7);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 52px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.academy-text p {
-    color: var(--muted);
-    font-size: 16px;
-}
-
-.academy ul {
-    margin: 20px 0 28px 20px;
-    color: var(--muted);
-}
-
-.academy li {
-    margin: 8px 0;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.cta {
-    background: linear-gradient(135deg,var(--blue),#087CAE);
-    color: white;
-    text-align: center;
-}
-
-.cta h2 {
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta p {
-    max-width: 650px;
-    margin: 15px auto 28px;
-    color: #E4F7FD;
-}
-
-.contact-info {
-    margin-top: 28px;
-    font-size: 15px;
-    line-height: 2;
-}
-
-.contact-info a {
-    font-weight: 800;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
-}
-
-.social-link {
-    border: 1px solid rgba(255,255,255,0.35);
-    border-radius: 30px;
-    padding: 9px 16px;
-    font-size: 13px;
-    font-weight: 700;
-    transition: 0.2s;
-}
-
-.social-link:hover {
-    background: white;
-    color: var(--blue);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #041923;
-    color: #A9BEC7;
-    padding: 38px 0;
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.footer-brand strong {
-    color: white;
-    font-size: 18px;
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    font-size: 13px;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.copyright {
-    border-top: 1px solid rgba(255,255,255,0.08);
-    margin-top: 25px;
-    padding-top: 20px;
-    font-size: 12px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 950px) {
-
-    .nav-links {
-        gap: 14px;
-        font-size: 12px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Skypace Hub | Digital Marketing, Advertising & Business Growth</title>
+
+  <meta name="description" content="Skypace Hub helps ambitious businesses grow through digital marketing, advertising, technology, AI-powered solutions, lead generation, branding and strategic growth solutions.">
+
+  <meta name="keywords" content="Skypace Hub, digital marketing Nigeria, digital advertising Nigeria, SEO Nigeria, social media marketing, lead generation, business growth, web design, branding, AI marketing">
+
+  <meta name="author" content="Skypace Hub">
+
+  <meta property="og:title" content="Skypace Hub | Fueling Creativity. Igniting Brands.">
+  <meta property="og:description" content="Turn attention into measurable business growth with Skypace Hub.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --blue: #0797D5;
+      --blue-dark: #0575A8;
+      --green: #8BD63F;
+      --green-light: #EFFFDF;
+      --dark: #06263A;
+      --dark-2: #0B344B;
+      --light: #F3FBFE;
+      --text: #102C3C;
+      --muted: #607784;
+      --white: #FFFFFF;
+      --border: #DCECF2;
+      --shadow: 0 20px 50px rgba(6, 38, 58, 0.10);
     }
 
-    .hero-grid,
-    .problem-grid,
-    .two-column,
-    .academy {
-        grid-template-columns: 1fr;
-        gap: 45px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .services {
-        grid-template-columns: repeat(2,1fr);
+    html {
+      scroll-behavior: smooth;
     }
 
-    .metrics {
-        grid-template-columns: repeat(3,1fr);
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
     }
 
-    .steps {
-        grid-template-columns: repeat(2,1fr);
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .hero-photo {
-        height: 480px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .hero-badge {
-        left: 18px;
+    .container {
+      width: 92%;
+      max-width: 1180px;
+      margin: auto;
     }
-}
 
-@media (max-width: 650px) {
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
 
     .nav-inner {
-        min-height: 68px;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .nav-links a:not(.nav-cta) {
-        display: none;
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    /* BUTTONS */
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 9px;
+      background: var(--blue);
+      color: white;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--blue-dark);
+    }
+
+    .button.green {
+      background: var(--green);
+      color: #152800;
+    }
+
+    .button.green:hover {
+      background: #78C72E;
+    }
+
+    .button.outline {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .button.outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* HERO */
 
     .hero {
-        min-height: auto;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 15%, #DFF8C9, transparent 25%),
+        radial-gradient(circle at 10% 80%, #DDF6FF, transparent 25%),
+        linear-gradient(135deg, #EFFAFF, #FFFFFF);
     }
 
     .hero-grid {
-        padding: 65px 0;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 65px;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .tagline {
+      color: var(--blue);
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-size: 13px;
     }
 
     .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2.5px;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
     }
 
-    .hero-text {
-        font-size: 16px;
+    .hero h1 span {
+      color: var(--blue);
     }
 
-    .hero-photo {
-        height: 400px;
+    .hero p {
+      color: var(--muted);
+      font-size: 19px;
+      max-width: 690px;
     }
 
-    .hero-badge {
-        bottom: 15px;
-        left: 15px;
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
     }
 
-    .section,
-    .problem {
-        padding: 75px 0;
+    .hero-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* GROWTH PANEL */
+
+    .dashboard {
+      background: var(--dark);
+      color: white;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 30px 70px rgba(6,38,58,0.20);
+    }
+
+    .dashboard-title {
+      color: #A9C3CF;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .dashboard-main {
+      margin-top: 20px;
+      padding: 24px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(7,151,213,0.25), rgba(139,214,63,0.16));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .dashboard-main strong {
+      display: block;
+      font-size: 31px;
+      margin-top: 8px;
+    }
+
+    .dashboard-box {
+      margin-top: 13px;
+      padding: 17px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 12px;
+    }
+
+    .dashboard-box small {
+      color: #A9C3CF;
+    }
+
+    .dashboard-box strong {
+      display: block;
+      font-size: 17px;
+      margin-top: 4px;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .dark {
+      background: var(--dark);
+      color: white;
+    }
+
+    .light {
+      background: var(--light);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .dark .eyebrow {
+      color: var(--green);
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 50px);
+      line-height: 1.08;
+      letter-spacing: -1.7px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      line-height: 1.2;
+    }
+
+    .section-text {
+      color: var(--muted);
+    }
+
+    .dark .section-text {
+      color: #C2D4DC;
+    }
+
+    .quote {
+      border-left: 4px solid var(--green);
+      padding-left: 18px;
+      margin-top: 25px;
+      font-size: 20px;
+    }
+
+    /* SERVICES */
+
+    .section-heading {
+      max-width: 730px;
     }
 
     .services {
-        grid-template-columns: 1fr;
-        margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 45px;
     }
 
-    .metrics {
-        grid-template-columns: 1fr 1fr;
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 17px;
+      transition: 0.25s ease;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      background: var(--green-light);
+      border-radius: 13px;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 9px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* WHY US */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .why-card {
+      padding: 28px;
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 17px;
+    }
+
+    .why-number {
+      color: var(--green);
+      font-weight: 900;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      color: #BBD0D9;
+      font-size: 14px;
+    }
+
+    /* PROCESS */
 
     .steps {
-        grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 40px;
     }
 
+    .step {
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 22px;
+      background: white;
+    }
+
+    .step b {
+      color: var(--blue);
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .step h3 {
+      margin-top: 7px;
+      font-size: 17px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    /* AUDIENCE */
+
+    .audience {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .pill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 9px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* MENTORSHIP */
+
     .academy {
-        padding: 30px 24px;
+      background: linear-gradient(135deg, #EAFBFF, #F3FFE7);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .academy ul {
+      margin: 20px 0 25px 20px;
+      color: var(--muted);
+    }
+
+    .academy li {
+      margin: 8px 0;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 15px auto 25px;
+      color: #E5F8FF;
+    }
+
+    .contact-info {
+      margin-top: 25px;
+      font-size: 15px;
+    }
+
+    .contact-info a {
+      color: white;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #041923;
+      color: #A9BEC8;
+      padding: 40px 0;
     }
 
     .footer-inner {
-        display: block;
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner strong {
+      color: white;
     }
 
     .footer-links {
-        margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-}
-</style>
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .hero-grid,
+      .two-column,
+      .academy {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .services,
+      .why-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .academy {
+        padding: 30px 23px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .dashboard {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+  <!-- NAVIGATION -->
 
-<nav>
-<div class="container nav-inner">
+  <nav>
+    <div class="container nav-inner">
 
-    <a href="#home" class="logo">
+      <a href="#home" class="logo">
         SKY<span>PACE</span> HUB
-    </a>
+      </a>
 
-    <div class="nav-links">
+      <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#process">Process</a>
-        <a href="#mentorship">Mentorship</a>
-        <a href="#contact" class="nav-cta">Let's Talk</a>
+        <a href="#approach">How We Grow</a>
+        <a href="#academy">Mentorship</a>
+        <a href="#contact" class="button">Get Started</a>
+      </div>
+
     </div>
-
-</div>
-</nav>
+  </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+  <!-- HERO -->
 
-<header class="hero" id="home">
+  <header class="hero" id="home">
 
-<div class="container hero-grid">
+    <div class="container hero-grid">
 
-    <div>
+      <div>
 
         <div class="tagline">
-            Fueling Creativity. Igniting Brands.
+          Fueling Creativity. Igniting Brands.
         </div>
 
         <h1>
-            Turn attention into
-            <span>business growth.</span>
+          Turn attention into
+          <span>measurable business growth.</span>
         </h1>
 
-        <p class="hero-text">
-            Skypace Hub helps ambitious businesses attract the right
-            audience, build stronger brands and create measurable
-            opportunities through creativity, technology and strategy.
+        <p>
+          Skypace Hub helps ambitious businesses generate leads,
+          acquire customers and grow revenue through digital marketing,
+          advertising, technology, AI and strategic growth solutions.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#contact" class="btn btn-primary">
-                Start a Conversation
-            </a>
+          <a href="#contact" class="button">
+            Build Your Growth System
+          </a>
 
-            <a href="#services" class="btn btn-outline">
-                Explore Our Services
-            </a>
+          <a href="#services" class="button outline">
+            Explore Our Services
+          </a>
 
         </div>
+
+        <div class="hero-note">
+          Strategy • Creativity • Technology • Data • Growth
+        </div>
+
+      </div>
+
+
+      <div class="dashboard">
+
+        <div class="dashboard-title">
+          SKYPACE GROWTH INTELLIGENCE
+        </div>
+
+        <div class="dashboard-main">
+          <small>Primary Objective</small>
+          <strong>Business Growth</strong>
+        </div>
+
+        <div class="dashboard-box">
+          <small>Focus</small>
+          <strong>Customer Acquisition</strong>
+        </div>
+
+        <div class="dashboard-box">
+          <small>Approach</small>
+          <strong>Data + Creativity + AI</strong>
+        </div>
+
+        <div class="dashboard-box">
+          <small>Outcome</small>
+          <strong>Leads → Customers → Growth</strong>
+        </div>
+
+      </div>
 
     </div>
 
+  </header>
 
-    <div class="hero-visual">
 
-        <div class="hero-photo">
+  <!-- PROBLEM -->
 
-            <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1100&q=85"
-                alt="Business professionals collaborating"
-            >
+  <section class="section dark">
 
+    <div class="container two-column">
+
+      <div>
+
+        <div class="eyebrow">
+          The Problem
         </div>
 
-        <div class="hero-badge">
+        <h2>
+          Your business doesn't need more vanity metrics. It needs customers.
+        </h2>
 
-            <strong>
-                Creativity + Strategy
-            </strong>
+      </div>
 
-            <span>
-                Building brands that connect with people.
-            </span>
+      <div>
 
+        <p class="section-text">
+          Likes, followers and impressions can be useful signals,
+          but they are not the final business outcome.
+        </p>
+
+        <p class="section-text" style="margin-top:15px;">
+          Skypace Hub connects marketing activity to leads,
+          conversions, customer acquisition and business growth.
+        </p>
+
+        <div class="quote">
+          Stop chasing attention. Start building a customer acquisition system.
         </div>
+
+      </div>
 
     </div>
 
-</div>
-
-</header>
+  </section>
 
 
-<!-- =========================
-     PROBLEM
-========================= -->
+  <!-- SERVICES -->
 
-<section class="problem dark">
+  <section class="section light" id="services">
 
-<div class="container
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          What We Do
+        </div>
+
+        <h2>
+          Growth solutions built around your business.
+        </h2>
+
+        <p class="section-text">
+          From visibility and customer acquisition to technology
+          and strategic growth, we help businesses build stronger
+          digital systems.
+        </p>
+
+      </div>
+
+
+      <div class="services">
+
+        <div class="card">
+          <div class="icon">📣</div>
+          <h3>Digital Marketing</h3>
+          <p>
+            Strategic digital campaigns designed to increase visibility,
+            attract the right audience and generate business opportunities.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h3>Performance Advertising</h3>
+          <p>
+            Data-driven advertising strategies focused on reaching
+            potential customers and improving campaign performance.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔎</div>
+          <h3>SEO & Search Growth</h3>
+          <p>
+            Search strategies that help businesses become easier to
+            discover and attract valuable organic traffic.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💬</div>
+          <h3>Social Media</h3>
+          <p>
+            Content and social strategies that strengthen brands,
+            build communities and create meaningful engagement.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌐</div>
+          <h3>Web & Digital Presence</h3>
+          <p>
+            Professional websites and digital experiences designed
+            to turn visitors into enquiries and customers.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🤖</div>
+          <h3>AI & Technology</h3>
+          <p>
+            Practical technology and AI-powered solutions that help
+            businesses improve efficiency, marketing and decision-making.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Branding & Creative</h3>
+          <p>
+            Creative brand solutions that help businesses communicate
+            clearly and stand out in competitive markets.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>Lead Generation</h3>
+          <p>
+            Customer acquisition systems designed to attract prospects,
+            capture opportunities and support business growth.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧭</div>
+          <h3>Business Strategy</h3>
+          <p>
+            Strategic guidance for businesses looking to improve their
+            positioning, marketing and growth direction.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+    <div class="container two-column">
+
+      <div>
+
+        <div class="eyebrow">
+          About Skypace Hub
+        </div>
+
+        <h2>
+          We connect creativity with measurable growth.
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p class="section-text">
+          Skypace Hub is a growth-focused digital business that helps
+          ambitious brands navigate marketing, advertising, technology
+          and customer acquisition.
+        </p>
+
+        <p class="section-text" style="margin-top:18px;">
+          Our approach combines creative thinking with data,
+          technology and practical business strategy to help brands
+          move from simply being visible to becoming valuable.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY SKYPACE -->
+
+  <section class="section dark">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Why Skypace Hub
+        </div>
+
+        <h2>
+          More than marketing. A growth partner.
+        </h2>
+
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="why-number">01 — STRATEGY</div>
+          <h3>We start with the business.</h3>
+          <p>
+            Every growth activity should have a clear purpose,
+            audience and desired outcome.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">02 — DATA</div>
+          <h3>We measure what matters.</h3>
+          <p>
+            We focus on useful business signals such as leads,
+            conversions, customer acquisition and growth.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">03 — CREATIVITY</div>
+          <h3>We make brands memorable.</h3>
+          <p>
+            Strong strategy needs strong communication.
+            Creativity helps brands earn attention and trust.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+
+  <section class="section" id="approach">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          How We Grow
+        </div>
+
+        <h2>
+          A simple system for sustainable growth.
+        </h2>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+          <b>STEP 01</b>
+          <h3>Discover</h3>
+          <p>
+            Understand your business, audience, market and goals.
+          </p>
+        </div>
+
+        <div class="step">
+          <b>STEP 02</b>
+          <h3>Strategize</h3>
+          <p>
+            Build a clear marketing and growth direction.
+          </p>
+        </div>
+
+        <div class="step">
+          <b>STEP 03</b>
+          <h3>Build</h3>
+          <p>
+            Create the campaigns, content and digital systems.
+          </p>
+        </div>
+
+        <div class="step">
+          <b>STEP 04</b>
+          <h3>Launch</h3>
+          <p>
+            Put the strategy into action and reach your audience.
+          </p>
+        </div>
+
+        <div class="step">
+          <b>STEP 05</b>
+          <h3>Optimize</h3>
+          <p>
+            Learn from performance and improve the system continuously.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHO WE HELP -->
+
+  <section class="section light">
+
+    <div class="container two-column">
+
+      <div>
+
+        <div class="eyebrow">
+          Who We Help
+        </div>
+
+        <h2>
+          Built for ambitious businesses.
+        </h2>
+
+        <p class="section-text">
+          Whether you are building a new brand, expanding an existing
+          business or looking for a stronger digital presence,
+          Skypace Hub can help you develop the right growth system.
+        </p>
+
+      </div>
+
+
+      <div class="audience">
+
+        <div class="pill">Startups</div>
+        <div class="pill">Small Businesses</div>
+        <div class="pill">Growing Brands</div>
+        <div class="pill">Entrepreneurs</div>
+        <div class="pill">Professional Services</div>
+        <div class="pill">E-commerce</div>
+        <div class="pill">Local Businesses</div>
+        <div class="pill">Established Companies</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MENTORSHIP -->
+
+  <section class="section" id="academy">
+
+    <div class="container">
+
+      <div class="academy">
+
+        <div>
+
+          <div class="eyebrow">
+            Skypace Mentorship
+          </div>
+
+          <h2>
+            Learn how to build, market and grow.
+          </h2>
+
+          <p class="section-text">
+            Our mentorship direction is designed for entrepreneurs,
+            professionals and aspiring marketers who want practical
+            knowledge they can apply.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <ul>
+            <li>Digital marketing fundamentals</li>
+            <li>Brand positioning</li>
+            <li>Social media strategy</li>
+            <li>Customer acquisition</li>
+            <li>Advertising and campaign strategy</li>
+            <li>Business growth thinking</li>
+          </ul>
+
+          <a href="#contact" class="button green">
+            Ask About Mentorship
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="section cta" id="contact">
+
+    <div class="container">
+
+      <div class="eyebrow" style="color:#DFF8C9;">
+        Ready to Grow?
+      </div>
+
+      <h2>
+        Let's turn your next idea into a growth opportunity.
+      </h2>
+
+      <p>
+        Tell us what you're building, where you want to go,
+        and what is currently standing in the way.
+      </p>
+
+      <a
+        href="mailto:skypacehub@gmail.com?subject=Skypace%20Hub%20Growth%20Consultation"
+        class="button green"
+      >
+        Start a Conversation
+      </a>
+
+      <div class="contact-info">
+
+        Email:
+        <a href="mailto:skypacehub@gmail.com">
+          skypacehub@gmail.com
+        </a>
+
+        <br>
+
+        Phone:
+        <a href="tel:09034394118">
+          09034394118
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div>
+          <strong>SKYPACE HUB</strong>
+          <br>
+          <span>Fueling Creativity. Igniting Brands.</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#approach">How We Grow</a>
+          <a href="#academy">Mentorship</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Skypace Hub. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
