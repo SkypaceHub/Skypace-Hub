@@ -1,0 +1,625 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skypace Hub | Digital Marketing, Advertising & Business Growth in Nigeria</title>
+
+<meta name="description" content="Skypace Hub helps businesses across Nigeria grow through digital marketing, advertising, SEO, lead generation, websites, branding, analytics, AI-powered solutions and business mentorship.">
+
+<meta name="keywords" content="digital marketing agency Nigeria, digital advertising Nigeria, performance marketing Nigeria, SEO services Nigeria, lead generation Nigeria, Google Ads Nigeria, Meta Ads Nigeria, web design Nigeria, social media marketing Nigeria, business growth Nigeria, marketing agency Nigeria">
+
+<meta name="author" content="Skypace Hub">
+
+<meta property="og:title" content="Skypace Hub | Fueling Creativity. Igniting Brands.">
+<meta property="og:description" content="Data-driven digital marketing, advertising and growth solutions that turn attention into measurable business growth.">
+<meta property="og:type" content="website">
+
+<style>
+
+:root {
+    --blue: #0797D5;
+    --dark: #06263A;
+    --green: #8BD63F;
+    --light: #F3FBFE;
+    --text: #102C3C;
+    --muted: #607784;
+    --white: #FFFFFF;
+    --border: #DCECF2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 9px;
+    background: var(--blue);
+    color: white;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button.green {
+    background: var(--green);
+    color: #152800;
+}
+
+.button.outline {
+    background: white;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 15%, #DFF8C9, transparent 25%),
+        linear-gradient(135deg, #EFFAFF, #FFFFFF);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.tagline {
+    color: var(--blue);
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 19px;
+    max-width: 680px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* GROWTH PANEL */
+
+.dashboard {
+    background: var(--dark);
+    color: white;
+    padding: 28px;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(6,38,58,0.18);
+}
+
+.dashboard-title {
+    color: #A9C3CF;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.dashboard-box {
+    margin-top: 15px;
+    padding: 18px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+}
+
+.dashboard-box small {
+    color: #A9C3CF;
+}
+
+.dashboard-box strong {
+    display: block;
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 85px 0;
+}
+
+.dark {
+    background: var(--dark);
+    color: white;
+}
+
+.light {
+    background: var(--light);
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--blue);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.dark .eyebrow {
+    color: var(--green);
+}
+
+h2 {
+    font-size: clamp(34px, 5vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+}
+
+.section-text {
+    color: var(--muted);
+}
+
+.dark .section-text {
+    color: #C2D4DC;
+}
+
+.quote {
+    border-left: 4px solid var(--green);
+    padding-left: 18px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+/* SERVICES */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(8,60,80,0.09);
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* METRICS */
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.metric {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 20px;
+}
+
+.metric strong {
+    font-size: 20px;
+}
+
+.metric span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* PROCESS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.step {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.step b {
+    color: var(--blue);
+    font-size: 11px;
+}
+
+.step h3 {
+    margin-top: 5px;
+}
+
+.step p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+/* AUDIENCE */
+
+.audience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.pill {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ACADEMY */
+
+.academy {
+    background: linear-gradient(135deg, #EAFBFF, #F3FFE7);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.academy ul {
+    margin: 20px 0 25px 20px;
+    color: var(--muted);
+}
+
+.academy li {
+    margin: 7px 0;
+}
+
+/* CTA */
+
+.cta {
+    background: var(--blue);
+    color: white;
+    text-align: center;
+}
+
+.cta p {
+    max-width: 680px;
+    margin: 15px auto 25px;
+    color: #E5F8FF;
+}
+
+.contact-info {
+    margin-top: 22px;
+    font-size: 15px;
+}
+
+.contact-info a {
+    color: white;
+    font-weight: 700;
+}
+
+/* FOOTER */
+
+footer {
+    background: #041923;
+    color: #A9BEC8;
+    padding: 35px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-inner strong {
+    color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-grid,
+    .two-column,
+    .academy {
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .metrics,
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-grid {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .services,
+    .metrics,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .academy {
+        padding: 28px 22px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav-inner">
+
+<a href="#" class="logo">
+SKY<span>PACE</span> HUB
+</a>
+
+<div class="nav-links">
+<a href="#services">Services</a>
+<a href="#approach">How We Grow</a>
+<a href="#academy">Mentorship</a>
+<a href="#about">About</a>
+<a href="#contact" class="button">Get Started</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="tagline">
+Fueling Creativity. Igniting Brands.
+</div>
+
+<h1>
+Turn attention into
+<span>measurable business growth.</span>
+</h1>
+
+<p>
+Skypace Hub helps ambitious businesses across Nigeria generate leads,
+acquire customers and grow revenue through data-driven marketing,
+advertising, technology and strategic growth solutions.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="button">
+Build Your Growth System
+</a>
+
+<a href="#services" class="button outline">
+Explore Our Services
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dashboard">
+
+<div class="dashboard-title">
+SKYPACE GROWTH INTELLIGENCE
+</div>
+
+<div class="dashboard-box">
+<small>Focus</small>
+<strong>Customer Acquisition</strong>
+</div>
+
+<div class="dashboard-box">
+<small>Approach</small>
+<strong>Data + Creativity + AI</strong>
+</div>
+
+<div class="dashboard-box">
+<small>Outcome</small>
+<strong>Leads → Customers → Growth</strong>
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- PROBLEM -->
+
+<section class="section dark">
+
+<div class="container two-column">
+
+<div>
+
+<div class="eyebrow">
+The Problem
+</div>
+
+<h2>
+Your business doesn't need more vanity metrics. It needs customers.
+</h2>
+
+</div>
+
+<div>
+
+<p class="section-text">
+Likes, followers and impressions can be useful signals, but they are
+not the final business outcome.
+</p>
+
+<p class="section-text" style="margin-top:15px;">
+Skypace Hub connects marketing activity to leads, conversions,
+acquisition costs, customer value and revenue.
+</p>
+
+<div class="quote">
+Stop chasing attention. Start building a customer acquisition system.
+</div>
+
+</div>
+
+</div>
+
+</sectio
